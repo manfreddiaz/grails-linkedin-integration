@@ -15,6 +15,7 @@
  */
 package com.gomentr
 
+import grails.plugin.springsecurity.annotation.Secured
 import grails.plugin.springsecurity.oauth.OAuthToken
 import grails.plugin.springsecurity.userdetails.GormUserDetailsService
 import grails.plugin.springsecurity.userdetails.GrailsUser
@@ -32,6 +33,7 @@ import com.gomentr.OAuthID
  * Simple helper controller for handling OAuth authentication and integrating it
  * into Spring Security.
  */
+@Secured('permitAll')
 class SpringSecurityOAuthController {
 
     public static final String SPRING_SECURITY_OAUTH_TOKEN = 'springSecurityOAuthToken'
